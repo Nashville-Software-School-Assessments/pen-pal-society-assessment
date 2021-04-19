@@ -1,0 +1,67 @@
+{
+    "pals": [
+        {
+            "id": 1,
+            "email": "mark@mark.com",
+            "name": "Mark Twain"
+        },
+        {
+            "id": 2,
+            "email": "maya@maya.com",
+            "name": "Maya Angelou"
+        },
+        {
+            "id": 3,
+            "email": "grace@grace.com",
+            "name": "Grace Hopper"
+        }
+    ],
+    "letters": [
+        {
+            "id": 1,
+            "sender": 1,
+            "recipient": 3,
+            "content": "Qui veniam voluptatem cumque accusantium dolore iste laudantium sequi et. In eos cum incidunt quidem rerum. Repellat laborum cumque ut quia officia vel nihil sapiente sit. Eaque cumque eaque itaque cum illum. Dolor possimus et ipsum. Consectetur fugiat earum veritatis et. Possimus cupiditate blanditiis quis. Deleniti velit nesciunt assumenda consequuntur ducimus. Tenetur et occaecati fugiat et cum quam consequatur. Ut eaque veritatis et quae. Qui ullam porro consequatur facilis ut. Similique maxime vero modi illo deleniti. Voluptas libero vel. Omnis tempore eligendi error voluptas qui voluptas atque aut. Quos vitae quas incidunt molestias et."
+        },
+        {
+            "id": 2,
+            "sender": 3,
+            "recipient": 2,
+            "content": "Qui veniam voluptatem cumque accusantium dolore iste laudantium sequi et. In eos cum incidunt quidem rerum. Repellat laborum cumque ut quia officia vel nihil sapiente sit. Eaque cumque eaque itaque cum illum. Dolor possimus et ipsum. Consectetur fugiat earum veritatis et. Possimus cupiditate blanditiis quis. Deleniti velit nesciunt assumenda consequuntur ducimus. Tenetur et occaecati fugiat et cum quam consequatur. Ut eaque veritatis et quae. Qui ullam porro consequatur facilis ut. Similique maxime vero modi illo deleniti. Voluptas libero vel. Omnis tempore eligendi error voluptas qui voluptas atque aut. Quos vitae quas incidunt molestias et."
+        }
+    ],
+    "topics": [
+        {
+            "id": 1,
+            "label": "Business"
+        },
+        {
+            "id": 2,
+            "label": "Friendly"
+        },
+        {
+            "id": 3,
+            "label": "Family"
+        },
+        {
+            "id": 4,
+            "label": "Congratulations"
+        },
+        {
+            "id": 5,
+            "label": "Condolences"
+        }
+    ],
+    "lettertopics": [
+        {
+            "id": 1,
+            "letterId": 1,
+            "topicId": 3
+        },
+        {
+            "id": 2,
+            "letterId": 1,
+            "topicId": 4
+        }
+    ]
+}
