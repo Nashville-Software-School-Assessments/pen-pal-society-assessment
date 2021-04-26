@@ -54,6 +54,7 @@ As stated above, this application is fairly simplistic in its feature set. You c
 * When the Send button is clicked, collect the user input and save the letter information
 * Store the new letter information in application state after it is created _(JSON Server responds with the newly created object when you submit a POST request)_
 * If any of the checkboxes were selected, create a relationship object for each one in the API for the new letter
+* After the letter, and its relationships to topics, is created, it should immediately be rendered in the list of letters.
 
 <img src="./pen-pal-initial-form.gif" width="800px" alt="animation of filling out the letter form" />
 
