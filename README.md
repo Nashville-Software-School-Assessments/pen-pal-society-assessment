@@ -1,11 +1,66 @@
-# The Pen Pal Society
+# Asynchronous Request/Response Assessment
 
-For this project, you will be building a fairly simple user interface, but the coordination of the state of the project is the goal. The person using the application can choose an author for a letter, provide the body of the letter, choose 1+ topics for the letter, and then choose a recipient.
+This project will help you assess your ability to apply the JavaScript skills that you practiced in this book.
 
+1. Form fields
+1. Collecting user input
+1. `fetch()` and `then()`
+1. Asynchronous state management
+
+## Demo
+
+<img src="./images/pen-pal-society-demo.gif" width="800px" alt="Animation of Pen Pal Society application" />
+
+## Features
+
+### User can choose an author
+
+**Given** a pen pal wants to send a letter<br/>
+**When** the Pen Pal app loads<br/>
+**Then** there should be a select element that displays all pen pals to choose for the author
+
+### User can choose an recipient
+
+**Given** a pen pal wants to send a letter<br/>
+**When** the Pen Pal app loads<br/>
+**Then** there should be a select element that displays all pen pals to choose for the recipient
+
+### User can choose a letter topic
+
+**Given** a pen pal wants to send a letter<br/>
+**When** the Pen Pal app loads<br/>
+**Then** there should be a group of radio buttons for the user to choose a topic
+
+### User can enter the letter body
+
+**Given** a pen pal wants to send a letter<br/>
+**When** the Pen Pal app loads<br/>
+**Then** there should be textarea element in which the user can type in the letter body
+
+### User can save letter
+
+**Given** a pen pal wants to send a letter<br/>
+**When** the Pen Pal app loads<br/>
+**Then** there should be button labeled Send at the bottom of the form<br/>
+
+---
+
+**Given** a pen pal is done writing a letter<br/>
+**When** the pal clicks the Send button<br/>
+**Then** the letter should be saved in the API database<br/>
+**And** the new letter should immediately be rendered in the list of letters below the form<br/>
+**And** the rendered letter should display the following information
+
+* author
+* recipient
+* date sent
+* email address of author/recipient
+* topic of letter
+* content of the letter
 
 ## The Data
 
-Below is a description of the different state to be tracked and represented in your application. You will decide on what the key names are for each piece of state and what the data types should be.
+Below is a description of the different states to be tracked and represented in your application. You will decide on what the key names are for each piece of state and what the data types should be.
 
 ### Pen Pals
 
@@ -32,39 +87,42 @@ You need a collection of objects that represent the topics that can be assigned 
 * primary key
 * label of the topic
 
-### Letter Topics
-
-You need a collection of objects that represent the relationships between a letter and the topics chosen for it.
-
-* primary key
-* the letter
-* the topic
-
 ### ERD
 
-Before you write any code, or build your `database.json` file for your API service, build an ERD that visualizes this data and the relationships between each resource.
+Before you write any code, or build your `database.json` file for your API service, build an ERD that visualizes the data () and the relationships between each resource.
 
-## Features
+## Deep Learning
 
-As stated above, this application is fairly simplistic in its feature set. You can fill out a form to create a letter, and then there is a list of letters displayed beneath the form. As you will discover, plain - even boring - applications can be technically sophisticated in their implementation. You will need to understand how to use `fetch()` and `then()`, have a solid understanding of state, and how to keep the API state and your application state in sync.
+Another reminder from the instruction team. This is NOT A TEST. We are not looking for 100% completion, although if you can make it work completely, then huzzah for you.
 
-### Create Letter
+What we are looking for is effort, critical thinking about the concepts, creative thinking to bind the concepts together for a solution, and collaboration with your teammates and instruction team.
 
-* Create a module that generates a letter form
-* When the Send button is clicked, collect the user input and save the letter information
-* Store the new letter information in application state after it is created _(JSON Server responds with the newly created object when you submit a POST request)_
-* If any of the checkboxes were selected, create a relationship object for each one in the API for the new letter
-* After the letter, and its relationships to topics, is created, it should immediately be rendered in the list of letters.
+If you only get 50% of it complete, but display the above Core Skills and can demonstrate understanding of the fundamental code concepts, then you are learning and growing - which is what we care about.
 
-<img src="./pen-pal-initial-form.gif" width="800px" alt="animation of filling out the letter form" />
+## Optional Advanced Challenge
 
-### Display Letters
+Think you have a strong understanding of asynchronous operations using `fetch()` and `then()`? In the mood to stretch your coding skills and take on a challenge? Once you complete the assessment given the features listed above, you have the option of taking on this challenge.
 
-* Display a list of letters
-* Each letter should display the author
-* Each letter should display the recipient
-* Each letter should display the letter body
-* Each letter should display the date it was created
-* Each letter should display its topics
+<img src="./images/pen-pal-society-multiple-tags-demo.gif" width="800px" alt="animation of choosing multiple topics for a letter" />
 
-<img src="./pen-pal-list-of-letters.gif" width="800px" alt="animation of the list of letters" />
+### User can choose multiple letter topics
+
+**Given** a pen pal wants to send a letter<br/>
+**When** the Pen Pal app loads<br/>
+**Then** there should be a group of checkboxes for the user to choose one, or more, topics
+
+### User can save letter with multiple topics
+
+**Given** a pen pal is done writing a letter<br/>
+**When** the pal clicks the Send button<br/>
+**Then** the letter should be saved in the API database<br/>
+**And** the new letter should immediately be rendered in the list of letters below the form<br/>
+**And** the rendered letter should display the following information
+
+* author
+* recipient
+* date sent
+* email address of author/recipient
+* all topics chosen
+
+How does this change the data relationships? How should you update your ERD -- and the corresponding resources in your databse -- to reflect this change?
